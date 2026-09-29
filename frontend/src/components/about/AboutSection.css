@@ -1,0 +1,195 @@
+/* =========================================================
+   ABOUT SECTION: WARM IVORY & NATURAL TIMBER
+   Background: #F5F1E8 • Text: #211C18 • Muted: #6F655B
+   ========================================================= */
+
+.about-editorial-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-48);
+  align-items: center;
+}
+
+.about-text-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+.about-editorial-title {
+  color: var(--text-dark);
+  margin-bottom: var(--space-24);
+  line-height: 1.08;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+[lang="ta"] .about-editorial-title {
+  font-family: var(--font-tamil);
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+.about-editorial-body {
+  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: var(--space-16);
+}
+
+.about-editorial-body-sub {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-32);
+}
+
+/* Integrated Verified Customer Review */
+.about-review-embed {
+  display: flex;
+  gap: var(--space-16);
+  align-items: flex-start;
+  background-color: var(--paper-warm);
+  border-left: 3px solid var(--wood-dark);
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-24);
+  border-top: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.review-quote-icon {
+  color: var(--wood-dark);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.review-quote-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-quote-text {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.review-author-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wood-dark);
+}
+
+.about-location-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Right Photo Frame */
+.about-image-column {
+  position: relative;
+}
+
+.about-photo-frame {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 16px 40px rgba(33, 23, 17, 0.08);
+  aspect-ratio: 4 / 3;
+}
+
+.about-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-editorial);
+}
+
+.about-photo-frame:hover .about-photo-img {
+  transform: scale(1.02);
+}
+
+/* 20+ Years Callout Badge (Espresso & Aged Brass) */
+.about-badge-callout {
+  position: absolute;
+  bottom: var(--space-24);
+  right: var(--space-24);
+  background-color: var(--espresso);
+  color: var(--text-light);
+  border: 1px solid rgba(177, 138, 82, 0.3);
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  box-shadow: 0 15px 30px rgba(33, 23, 17, 0.4);
+}
+
+.badge-years {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--brass-light);
+  line-height: 1;
+}
+
+.badge-caption {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  line-height: 1.25;
+}
+
+@media (max-width: 960px) {
+  .about-editorial-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+
+  .about-badge-callout {
+    bottom: var(--space-16);
+    right: var(--space-16);
+    padding: var(--space-12) var(--space-16);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-editorial-title {
+    font-size: clamp(1.6rem, 6.2vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  [lang="ta"] .about-editorial-title {
+    font-size: clamp(1.35rem, 5.4vw, 1.8rem);
+    line-height: 1.28;
+    letter-spacing: normal;
+  }
+
+  .about-editorial-body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .about-editorial-body-sub {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+}

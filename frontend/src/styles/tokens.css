@@ -1,0 +1,82 @@
+:root {
+  /* =========================================================
+     SRI NAVALADIAN SAW MILL: MATERIAL DESIGN TOKENS
+     Natural Timber • Warm Ivory Paper • Espresso Wood • Aged Brass
+     ========================================================= */
+
+  /* Paper / Warm Ivory Surfaces */
+  --paper: #F5F1E8;
+  --paper-warm: #EDE5D7;
+  --white: #FFFDF8;
+
+  /* Deep Espresso Atmospheres */
+  --espresso: #211711;
+  --espresso-soft: #2D2018;
+
+  /* Natural Timber Browns */
+  --wood-dark: #5A3822;
+  --wood: #805536;
+  --wood-light: #A8794F;
+
+  /* Aged Brass Accents */
+  --brass: #B18A52;
+  --brass-light: #C9A66B;
+
+  /* High Contrast Typography Colors */
+  --text-dark: #211C18;
+  --text-muted: #6F655B;
+  --text-light: #F8F3E9;
+
+  /* Subtle Structural Borders */
+  --border-light: #D8CCBC;
+  --border-dark: rgba(255, 255, 255, 0.14);
+
+  /* Fonts */
+  --font-display: 'Manrope', 'Noto Sans Tamil', -apple-system, sans-serif;
+  --font-sans: 'Inter', 'Noto Sans Tamil', -apple-system, sans-serif;
+  --font-tamil: 'Noto Sans Tamil', 'Inter', sans-serif;
+
+  /* Spacing Scale (4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 120px) */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-120: 120px;
+
+  /* Layout Containers */
+  --container-max-width: 1240px;
+  --container-padding: clamp(1.25rem, 4vw, 2.75rem);
+
+  /* Radii - Architectural (0–6px) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --ease-editorial: cubic-bezier(0.19, 1, 0.22, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 350ms;
+  --duration-slow: 600ms;
+}
+
+/* Tamil font specific adjustments */
+[lang="ta"] {
+  font-family: var(--font-tamil);
+  letter-spacing: 0;
+}
+
+[lang="ta"] h1,
+[lang="ta"] h2,
+[lang="ta"] h3,
+[lang="ta"] h4 {
+  font-family: var(--font-tamil);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}

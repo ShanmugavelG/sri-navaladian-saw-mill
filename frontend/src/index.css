@@ -1,0 +1,278 @@
+@import './styles/tokens.css';
+
+/* =========================================================
+   SRI NAVALADIAN SAW MILL: ARCHITECTURAL DESIGN SYSTEM
+   Warm Ivory Paper • Espresso Wood • Natural Timber • Aged Brass
+   ========================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--paper);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--paper);
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Fluid Editorial Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  overflow-wrap: break-word;
+}
+
+[lang="ta"] h1,
+[lang="ta"] h2,
+[lang="ta"] h3,
+[lang="ta"] h4 {
+  font-family: var(--font-tamil);
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+}
+
+.site-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(1.85rem, 6.2vw, 6.25rem);
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4.8vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.95rem);
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: clamp(1rem, 1.2vw, 1.05rem);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--duration-fast) ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility Focus Outline */
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section-editorial {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  position: relative;
+}
+
+/* =========================================================
+   ALTERNATING SECTION RHYTHM
+   LIGHT -> DARK -> LIGHT -> DARK -> LIGHT -> DARK
+   ========================================================= */
+
+/* Warm Ivory Paper Sections */
+.section-paper {
+  background-color: var(--paper);
+  color: var(--text-dark);
+}
+
+.section-paper p {
+  color: var(--text-muted);
+}
+
+.section-paper h1,
+.section-paper h2,
+.section-paper h3 {
+  color: var(--text-dark);
+}
+
+/* Deep Espresso Sections */
+.section-espresso {
+  background-color: var(--espresso);
+  color: var(--text-light);
+}
+
+.section-espresso p {
+  color: var(--text-muted);
+}
+
+.section-espresso h1,
+.section-espresso h2,
+.section-espresso h3 {
+  color: var(--text-light);
+}
+
+/* Editorial Eyebrow & Numbering */
+.editorial-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: var(--space-16);
+}
+
+.section-espresso .editorial-kicker {
+  color: var(--brass-light);
+}
+
+.section-paper .editorial-kicker {
+  color: var(--wood);
+}
+
+/* =========================================================
+   BUTTON DESIGN SYSTEM (ESPRESSO / TIMBER / IVORY)
+   Architectural Rectangular (0–4px radius, 48–52px height)
+   ========================================================= */
+
+.btn-editorial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  min-height: 50px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 28px;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-editorial);
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Primary Espresso Button */
+.btn-editorial-espresso {
+  background-color: var(--espresso);
+  color: var(--text-light);
+  border-color: var(--espresso);
+}
+
+.btn-editorial-espresso:hover {
+  background-color: var(--wood-dark);
+  border-color: var(--wood-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Outline Dark Button */
+.btn-editorial-outline-dark {
+  background-color: transparent;
+  color: var(--text-dark);
+  border-color: var(--border-light);
+}
+
+.btn-editorial-outline-dark:hover {
+  border-color: var(--wood-dark);
+  color: var(--wood-dark);
+  background-color: var(--paper-warm);
+}
+
+/* Outline Light Button (For Espresso Sections) */
+.btn-editorial-outline-light {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--border-dark);
+}
+
+.btn-editorial-outline-light:hover {
+  border-color: var(--brass-light);
+  color: var(--brass-light);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Solid Ivory Button (For Espresso Sections) */
+.btn-editorial-ivory {
+  background-color: var(--paper);
+  color: var(--espresso);
+  border-color: var(--paper);
+}
+
+.btn-editorial-ivory:hover {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--espresso);
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Button: Timber Palette (NOT bright neon green) */
+.btn-editorial-whatsapp {
+  background-color: var(--wood-dark);
+  color: var(--white);
+  border: 1px solid var(--wood-dark);
+}
+
+.btn-editorial-whatsapp:hover {
+  background-color: var(--wood);
+  border-color: var(--wood);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.whatsapp-icon-accent {
+  color: #25D366; /* Authentic WhatsApp icon highlight */
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

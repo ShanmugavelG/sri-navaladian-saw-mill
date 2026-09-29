@@ -1,0 +1,200 @@
+/* =========================================================
+   FOOTER: DEEP ESPRESSO & AGED BRASS EDITORIAL LAYOUT
+   Background: #211711 • Padding: 56px 0 32px
+   ========================================================= */
+
+.footer-editorial {
+  background-color: var(--espresso);
+  color: var(--text-light);
+  padding: 56px 0 32px;
+  border-top: 1px solid rgba(177, 138, 82, 0.25);
+  position: relative;
+}
+
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.25fr;
+  align-items: flex-start;
+  gap: var(--space-48);
+  padding-bottom: var(--space-48);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* LEFT: Business Identity & Tamil Name */
+.footer-col-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+}
+
+.footer-brand-tamil {
+  font-size: 0.85rem;
+  color: var(--brass-light);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-16);
+}
+
+.footer-experience-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  background-color: var(--espresso-soft);
+  border: 1px solid rgba(177, 138, 82, 0.3);
+  color: var(--brass-light);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-xs);
+}
+
+/* CENTER: Navigation Links */
+.footer-col-center {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  list-style: none;
+}
+
+.footer-nav-link {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(248, 243, 233, 0.65);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease, transform var(--duration-fast) ease;
+  display: inline-block;
+}
+
+.footer-nav-link:hover {
+  color: var(--text-light);
+  transform: translateX(3px);
+}
+
+/* RIGHT: Phone & Address */
+.footer-col-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-phone-cta {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+  text-decoration: none;
+  line-height: 1.1;
+  margin-bottom: var(--space-8);
+  transition: color var(--duration-fast) ease;
+}
+
+.footer-phone-cta:hover {
+  color: var(--brass-light);
+}
+
+.footer-address-block {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: rgba(248, 243, 233, 0.65);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BOTTOM BAR: Copyright & Scroll to Top */
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  padding-top: var(--space-24);
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: rgba(248, 243, 233, 0.6);
+  margin: 0;
+}
+
+.footer-top-btn {
+  background: none;
+  border: 1px solid rgba(177, 138, 82, 0.3);
+  color: rgba(248, 243, 233, 0.7);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  transition: all var(--duration-fast) ease;
+}
+
+.footer-top-btn:hover {
+  color: var(--text-light);
+  border-color: var(--brass-light);
+  background-color: var(--espresso-soft);
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 900px) {
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+  }
+
+  .footer-col-center {
+    justify-content: flex-start;
+  }
+
+  .footer-col-right {
+    grid-column: span 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-editorial {
+    padding: 48px 0 28px;
+  }
+
+  .footer-columns-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding-bottom: var(--space-32);
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+}

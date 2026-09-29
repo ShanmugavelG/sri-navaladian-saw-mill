@@ -1,0 +1,361 @@
+/* =========================================================
+   CONTACT SECTION: REFINED DENSITY & ARCHITECTURAL COMPACTNESS
+   Section: #F5F1E8 • Plaque: #211711
+   Padding: clamp(64px, 7vw, 100px);
+   ========================================================= */
+
+.contact-section,
+.contact-architectural {
+  background-color: var(--paper);
+  color: var(--text-dark);
+  padding-block: clamp(64px, 7vw, 100px);
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: clamp(24px, 5vw, 80px);
+}
+
+.contact-composition-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT: Editorial Statement, Phone & Rectangular CTAs
+   ========================================================= */
+
+.contact-editorial-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Eyebrow: 24–30px gap to heading */
+.contact-kicker {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--wood);
+  margin-bottom: clamp(24px, 2.5vw, 30px);
+}
+
+[lang="ta"] .contact-kicker {
+  font-family: var(--font-tamil);
+  letter-spacing: 0.08em;
+}
+
+/* Big Heading: Bold, Architectural & Tight Line-Height (0.92–0.98) */
+.contact-hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  color: var(--text-dark);
+  margin: 0 0 clamp(18px, 2vw, 24px) 0;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Tamil Heading: Scaled appropriately with natural line-height */
+[lang="ta"] .contact-hero-heading {
+  font-family: var(--font-tamil);
+  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+/* Description: 18–24px from heading, 32–40px to phone */
+.contact-supporting-text {
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 0 clamp(32px, 3.2vw, 40px) 0;
+}
+
+/* Prominent Phone Block: 28–32px gap to buttons */
+.contact-phone-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(28px, 2.8vw, 32px);
+}
+
+.phone-micro-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--wood-dark);
+  margin-bottom: 6px;
+}
+
+[lang="ta"] .phone-micro-label {
+  font-family: var(--font-tamil);
+  letter-spacing: 0.08em;
+}
+
+.phone-prominent-link {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  text-decoration: none;
+  line-height: 1.05;
+  transition: color var(--duration-fast) ease;
+}
+
+.phone-prominent-link:hover {
+  color: var(--wood-dark);
+}
+
+/* Button Row: 28–36px gap to disclaimer */
+.contact-btn-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  margin-bottom: clamp(28px, 2.8vw, 36px);
+}
+
+.contact-btn-row .btn-editorial {
+  height: 52px;
+  min-height: 52px;
+  padding-inline: 28px;
+  border-radius: var(--radius-xs);
+}
+
+/* Secondary Disclaimer */
+.contact-pricing-disclaimer {
+  font-size: clamp(13px, 1vw, 14px);
+  color: #6F655B;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+/* =========================================================
+   RIGHT: Architectural Plaque Panel (Deep Espresso #211711)
+   High-Contrast Light Text • Compact Vertical Padding
+   ========================================================= */
+
+.contact-editorial-right {
+  display: flex;
+  justify-content: stretch;
+}
+
+.architectural-plaque-panel {
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  background: var(--espresso);
+  border: 1px solid rgba(177, 138, 82, 0.35);
+  border-radius: var(--radius-md);
+  padding: clamp(28px, 3vw, 42px);
+  position: relative;
+  box-shadow: 0 20px 45px rgba(33, 23, 17, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Brass Vertical Accent Line */
+.plaque-brass-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    var(--brass-light) 0%,
+    var(--brass) 50%,
+    transparent 100%
+  );
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.plaque-header {
+  margin-bottom: var(--space-16);
+}
+
+.plaque-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass-light);
+  margin-bottom: 6px;
+}
+
+/* HIGH-CONTRAST BUSINESS NAME (FIX FOR INVISIBLE DARK TEXT OVERRIDE) */
+.architectural-plaque-panel .plaque-business-name,
+.section-paper .architectural-plaque-panel .plaque-business-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.1vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #FFFDF8 !important;
+  line-height: 1.15;
+  margin: 0 0 4px 0;
+}
+
+.architectural-plaque-panel .plaque-business-tamil,
+.section-paper .architectural-plaque-panel .plaque-business-tamil {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #C9A66B !important;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.plaque-address-block {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  color: rgba(248, 243, 233, 0.88);
+  line-height: 1.48;
+  margin-bottom: var(--space-16);
+}
+
+.plaque-subtle-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(177, 138, 82, 0.35) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  margin-bottom: var(--space-16);
+}
+
+.plaque-operational-info {
+  margin-bottom: var(--space-20);
+}
+
+.plaque-phone-display {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #FFFDF8;
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.plaque-helper-note {
+  font-size: 0.85rem;
+  color: rgba(248, 243, 233, 0.68);
+  line-height: 1.45;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Secondary Directions Action */
+.plaque-footer-action {
+  margin-top: auto;
+  padding-top: var(--space-12);
+}
+
+.plaque-directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass-light);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(177, 138, 82, 0.4);
+  transition: all var(--duration-fast) ease;
+}
+
+.plaque-directions-link:hover {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+.directions-arrow {
+  transition: transform var(--duration-fast) ease;
+}
+
+.plaque-directions-link:hover .directions-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   RESPONSIVE (<= 960px & <= 768px)
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .contact-composition-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+  }
+
+  .architectural-plaque-panel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section,
+  .contact-architectural {
+    padding: 64px 20px;
+  }
+
+  .contact-hero-heading {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    line-height: 0.98;
+    margin-bottom: 18px;
+  }
+
+  [lang="ta"] .contact-hero-heading {
+    font-family: var(--font-tamil);
+    font-size: clamp(2.2rem, 9.5vw, 3.2rem);
+    line-height: 1.15;
+  }
+
+  .phone-prominent-link {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .contact-btn-row {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .contact-btn-row .btn-editorial {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .architectural-plaque-panel {
+    margin-top: 48px;
+    padding: 28px;
+    max-width: 100%;
+  }
+}
